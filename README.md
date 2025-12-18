@@ -62,36 +62,66 @@ Asimismo, el proyecto incorpora un tutorial inicial, orientado a familiarizar al
 
 Por último, la variedad de escenarios y el diseño visual contribuyen de manera significativa a una experiencia intensa y envolvente, evitando la monotonía y logrando que el jugador se sienta plenamente integrado en un auténtico campo de batalla en realidad virtual.
 
-
-
 ## Especificar qué sensores se han incluido sensores de los que se han trabajado en interfaces multimodales.
 
 Se ha implementado el giroscopio del dispositivo para controlar la orientación del personaje, permitiendo una rotación precisa y coherente con los movimientos del usuario.
 
 Asimismo, se utilizan el acelerómetro y los datos de altitud del dispositivo para desarrollar una mecánica de salto basada en el movimiento físico del jugador. De este modo, al detectar un salto en el mundo real, el personaje ejecuta la acción correspondiente dentro del videojuego, reforzando la inmersión y la interacción natural con el entorno virtual.
 
-
-
 ## Gif animado de ejecución
 
-### Mundo Principal
+**Mundo Principal**
+
+_Nota:_ a diferencia de otros mundos (escenas) en esta se emplea el siguiente script [`InteractiveFrame.cs`](img/InteractiveFrame.cs) para hacer los marcos selectores de mundos. Estos marcos al disparar a ellos hacen posible el teletransporte al mundo seleccionado.
+
+---
+
+**Mundo Tutorial**
+
+_Nota:_ a diferencia de otros mundos (escenas) en esta se emplea el siguiente script [`RandomTargetWithRandomLight.cs`](img/RandomTargetWithRandomLight.cs) para hacer que los objetivos aparezcan de manera aleatoria para conseguir que el usuario se familiarice con la interfaz y practique los controles del videojuego. Además cada objetivo se ilumina con un color aleatorio para facilitar la detección.
+
+A destacar en esta escena el uso de la iluminación en forma de spot activandolo y desactivandolo en función del objetivo a disparar.
+
+---
+
+**Mundo Montañas**
+
+_Nota:_ a diferencia de otros mundos (escenas) en esta se emplea el siguiente script [`BouncingEnemies`](img/BouncingEnemies.cs) para hacer que los objetivos salten de manera vertical. Que, en conjunto con la creación de un rigidbody en forma de capsula apreciamos como las físicas actúan.
+
+---
+
+**Mundo Castillo**
+
+A destacar de este mundo ha sido diseñado mediante la aplicación de prefab de la asset store de unity pero realizando ciertas modificaciones. En este mundo se probaron muchas de las mecánicas empleadas para el resto de los mundos.
+
+---
+
+**Mundo Fantasma**
+
+Nota: a diferencia de otras escenas en esta se emplea el siguiente script [`FollowPlayer`](img/FollowPlayer.cs) con el fin de que los objetivos planteados se desplazen a la posición del jugador.
 
 
+Para hacer posible la ejecución del videojuego se han realizado la siguiente lista de scripts:
 
-### Mundo Tutorial
-
-
-
-### Mundo Montañas
-
-
-
-### Mundo Castillo
-
-
-
-### Mundo Fantasma
-
+| Archivo                                             | Descripción                            |
+|----------------------------------------------------|--------------------------------------|
+| [AmmoPickup.cs](src/AmmoPickup.cs)                  | Script para la recogida de munición. |
+| [BouncingEnemies.cs](src/BouncingEnemies.cs)        | Controla enemigos que rebotan.       |
+| [Bullet.cs](src/Bullet.cs)                           | Maneja el comportamiento de las balas.|
+| [Cylinder.cs](src/Cylinder.cs)                       | Representa un cilindro en el juego.  |
+| [Enemy.cs](src/Enemy.cs)                             | Lógica general de enemigos.           |
+| [FollowPlayer.cs](src/FollowPlayer.cs)               | Enemigos que siguen al jugador.       |
+| [GameManager.cs](src/GameManager.cs)                 | Controlador principal del juego.      |
+| [Gun.cs](src/Gun.cs)                                 | Manejo del arma del jugador.          |
+| [InfoOfControllersTimer.cs](src/InfoOfControllersTimer.cs) | Temporizador para controladores.      |
+| [InteractiveFrame.cs](src/InteractiveFrame.cs)       | Gestión de marcos interactivos.       |
+| [IntroCameraMove.cs](src/IntroCameraMove.cs)         | Movimiento inicial de la cámara.      |
+| [MissionText.cs](src/MissionText.cs)                 | Texto de misiones en pantalla.        |
+| [PistolPlay.cs](src/PistolPlay.cs)                   | Control del disparo de pistola.       |
+| [PlayerControls.cs](src/PlayerControls.cs)           | Controles generales del jugador.      |
+| [PlayerInputHandler.cs](src/PlayerInputHandler.cs)   | Manejo de entradas del jugador.       |
+| [PlayerMovement.cs](src/PlayerMovement.cs)           | Movimiento del jugador.                |
+| [RandomTargetWithRandomLight.cs](src/RandomTargetWithRandomLight.cs) | Objetivo y luces aleatorias.       |
 
 
 ## Acta de los acuerdos del grupo respecto al trabajo en equipo: reparto de tareas, tareas desarrolladas individualmente, tareas desarrolladas en grupo, etc.
