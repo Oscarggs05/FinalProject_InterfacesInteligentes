@@ -2,8 +2,8 @@
 
 ## Autores
 
-Jaime Martín González
-Hugo González Pérez
+Jaime Martín González\
+Hugo González Pérez\
 Óscar García González
 
 ## Cuestiones importantes para el uso
@@ -22,13 +22,13 @@ En cuanto a la interfaz, se ha optado por un sistema de selección basado en Ray
 
 Mediante este sistema, el impacto de un proyectil sobre elementos interactivos permite diferenciar entre un disparo convencional y una acción de selección, facilitando la navegación por menús y opciones sin necesidad de interfaces adicionales
 
-Para volver al menú principal durante la ejecución del juego, se ha habilitado la tecla . (punto) en el teclado o el botón Options en el mando. Esta funcionalidad permite una salida rápida y accesible al menú sin interrumpir el flujo de la experiencia de juego.
+Para volver al menú principal durante la ejecución del juego, se ha habilitado la tecla `.` (punto) en el teclado o el botón Options en el mando. Esta funcionalidad permite una salida rápida y accesible al menú sin interrumpir el flujo de la experiencia de juego.
 
 
 ## Hitos de programación alcanzados y relación con los contenidos impartidos
 
 
-Para la implementación del comportamiento de persecución de los enemigos (fantasmas), se han aplicado conceptos vistos en la asignatura, haciendo uso de métodos propios de Unity como Vector3.MoveTowards para el desplazamiento y Transform.LookAt para la orientación hacia el jugador.
+Para la implementación del comportamiento de persecución de los enemigos (fantasmas), se han aplicado conceptos vistos en la asignatura, haciendo uso de métodos propios de Unity como `Vector3.MoveTowards` para el desplazamiento y ``Transform.LookAt`` para la orientación hacia el jugador.
 
 
 Se ha implementado un sistema de eventos para la gestión de la eliminación de enemigos. Cuando un proyectil impacta sobre un enemigo, se lanza un evento que es capturado por el HUD, permitiendo actualizar en tiempo real el contador de enemigos eliminados en la escena.
@@ -72,33 +72,33 @@ Asimismo, se utilizan el acelerómetro y los datos de altitud del dispositivo pa
 
 **Mundo Principal**
 
-_Nota:_ a diferencia de otros mundos (escenas) en esta se emplea el siguiente script [`InteractiveFrame.cs`](img/InteractiveFrame.cs) para hacer los marcos selectores de mundos. Estos marcos al disparar a ellos hacen posible el teletransporte al mundo seleccionado.
+_Nota:_ a diferencia de otros mundos (escenas) en esta se emplea el siguiente script [`InteractiveFrame.cs`](img/InteractiveFrame.cs) encargado de gestionar los marcos interactivos de selección de mundos. Al disparar sobre dichos marcos, se activa el teletransporte hacia el mundo seleccionado, facilitando una navegación intuitiva entre escenas.
 
 ---
 
 **Mundo Tutorial**
 
-_Nota:_ a diferencia de otros mundos (escenas) en esta se emplea el siguiente script [`RandomTargetWithRandomLight.cs`](img/RandomTargetWithRandomLight.cs) para hacer que los objetivos aparezcan de manera aleatoria para conseguir que el usuario se familiarice con la interfaz y practique los controles del videojuego. Además cada objetivo se ilumina con un color aleatorio para facilitar la detección.
+_Nota:_ a diferencia de otros mundos (escenas) en esta se emplea el siguiente script [`RandomTargetWithRandomLight.cs`](img/RandomTargetWithRandomLight.cs) el cual permite que los objetivos aparezcan de forma aleatoria. Este diseño tiene como objetivo que el usuario se familiarice progresivamente con la interfaz y practique los controles básicos del videojuego. Adicionalmente, cada objetivo se ilumina con un color aleatorio para mejorar su visibilidad y facilitar su detección.
 
-A destacar en esta escena el uso de la iluminación en forma de spot activandolo y desactivandolo en función del objetivo a disparar.
+Cabe destacar el uso de iluminación tipo spotlight, la cual se activa y desactiva dinámicamente en función del objetivo activo, reforzando la atención del jugador sobre el elemento a eliminar.
 
 ---
 
 **Mundo Montañas**
 
-_Nota:_ a diferencia de otros mundos (escenas) en esta se emplea el siguiente script [`BouncingEnemies`](img/BouncingEnemies.cs) para hacer que los objetivos salten de manera vertical. Que, en conjunto con la creación de un rigidbody en forma de capsula apreciamos como las físicas actúan.
+_Nota:_ a diferencia de otros mundos (escenas) en esta se emplea el siguiente script [`BouncingEnemies`](img/BouncingEnemies.cs) que permite que los enemigos realicen saltos verticales. En combinación con la incorporación de un Rigidbody con colisión en forma de cápsula, se consigue una interacción realista con el sistema de físicas del motor, aportando dinamismo a los objetivos.
 
 ---
 
 **Mundo Castillo**
 
-A destacar de este mundo ha sido diseñado mediante la aplicación de prefab de la asset store de unity pero realizando ciertas modificaciones. En este mundo se probaron muchas de las mecánicas empleadas para el resto de los mundos.
+Este mundo ha sido diseñado a partir de prefabs obtenidos de la Asset Store de Unity, sobre los cuales se han realizado diversas modificaciones para adaptarlos a las necesidades del proyecto. En esta escena se han probado e integrado muchas de las mecánicas que posteriormente se han aplicado al resto de los mundos, funcionando como un entorno clave de validación y experimentación.
 
 ---
 
 **Mundo Fantasma**
 
-Nota: a diferencia de otras escenas en esta se emplea el siguiente script [`FollowPlayer`](img/FollowPlayer.cs) con el fin de que los objetivos planteados se desplazen a la posición del jugador.
+Nota: a diferencia de otras escenas en esta se emplea el siguiente script [`FollowPlayer`](img/FollowPlayer.cs) cuyo propósito es hacer que los enemigos se desplacen activamente hacia la posición del jugador, incrementando la presión y la sensación de amenaza durante la partida.
 
 
 Para hacer posible la ejecución del videojuego se han realizado la siguiente lista de scripts:
