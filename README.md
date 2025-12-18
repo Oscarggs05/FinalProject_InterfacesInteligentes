@@ -78,6 +78,8 @@ _Nota:_ a diferencia de otros mundos (escenas) en esta se emplea el siguiente sc
 
 **Mundo Tutorial**
 
+![`Tutorial.gif`](img/Tutorial.gif)
+
 _Nota:_ a diferencia de otros mundos (escenas) en esta se emplea el siguiente script [`RandomTargetWithRandomLight.cs`](img/RandomTargetWithRandomLight.cs) el cual permite que los objetivos aparezcan de forma aleatoria. Este diseño tiene como objetivo que el usuario se familiarice progresivamente con la interfaz y practique los controles básicos del videojuego. Adicionalmente, cada objetivo se ilumina con un color aleatorio para mejorar su visibilidad y facilitar su detección.
 
 Cabe destacar el uso de iluminación tipo spotlight, la cual se activa y desactiva dinámicamente en función del objetivo activo, reforzando la atención del jugador sobre el elemento a eliminar.
@@ -86,17 +88,23 @@ Cabe destacar el uso de iluminación tipo spotlight, la cual se activa y desacti
 
 **Mundo Montañas**
 
+![`Mountain.gif`](img/Mountain.gif)
+
 _Nota:_ a diferencia de otros mundos (escenas) en esta se emplea el siguiente script [`BouncingEnemies`](img/BouncingEnemies.cs) que permite que los enemigos realicen saltos verticales. En combinación con la incorporación de un Rigidbody con colisión en forma de cápsula, se consigue una interacción realista con el sistema de físicas del motor, aportando dinamismo a los objetivos.
 
 ---
 
 **Mundo Castillo**
 
+![`Castle.gif`](img/Castle.gif)
+
 Este mundo ha sido diseñado a partir de prefabs obtenidos de la Asset Store de Unity, sobre los cuales se han realizado diversas modificaciones para adaptarlos a las necesidades del proyecto. En esta escena se han probado e integrado muchas de las mecánicas que posteriormente se han aplicado al resto de los mundos, funcionando como un entorno clave de validación y experimentación.
 
 ---
 
 **Mundo Fantasma**
+
+![`Ghost.gif`](img/Ghost.gif)
 
 Nota: a diferencia de otras escenas en esta se emplea el siguiente script [`FollowPlayer`](img/FollowPlayer.cs) cuyo propósito es hacer que los enemigos se desplacen activamente hacia la posición del jugador, incrementando la presión y la sensación de amenaza durante la partida.
 
